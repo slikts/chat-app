@@ -14,6 +14,7 @@ const Wrapper = ({ children }) => (
         * {
           box-sizing: border-box;
         }
+        .ms-Fabric,
         :root,
         body,
         #root {

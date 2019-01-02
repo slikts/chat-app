@@ -60,16 +60,28 @@ storiesOf("Login", module)
     </NameForm>
   ))
   .add("login form", () => (
-    <LoginForm title="Title">{JSON.stringify}</LoginForm>
+    <div
+      css={css`
+        height: 600px;
+      `}
+    >
+      <LoginForm title="Title">{JSON.stringify}</LoginForm>
+    </div>
   ))
   .add("login form error", () => {
     setTimeout(() => {
       document.querySelector("button").click();
-    }, 10);
+    }, 100);
     return (
-      <MockedProvider mocks={mocks}>
-        <LoginForm title="Title">{JSON.stringify}</LoginForm>
-      </MockedProvider>
+      <div
+        css={css`
+          height: 600px;
+        `}
+      >
+        <MockedProvider mocks={mocks}>
+          <LoginForm title="Title">{JSON.stringify}</LoginForm>
+        </MockedProvider>
+      </div>
     );
   })
   .add("logout button", () => (

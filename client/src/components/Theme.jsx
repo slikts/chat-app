@@ -4,10 +4,12 @@ import { Query } from "react-apollo";
 import gql from "graphql-tag";
 import { fromRenderProps } from "recompose";
 import { initializeIcons } from "@uifabric/icons";
+import { loadTheme } from "@uifabric/styling";
 import themes from "../themes";
-import "normalize.css";
 
 initializeIcons();
+
+loadTheme(themes.default);
 
 export const THEME = gql`
   {

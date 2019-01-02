@@ -8,6 +8,7 @@ import LoginButton from "./LoginButton";
 import LoginError from "./LoginError";
 import fragments from "../fragments";
 import { CURRENT_USER } from "./Auth";
+import "./Theme";
 
 export const LAST_USERNAME = gql`
   {
@@ -47,30 +48,56 @@ const LoginForm = ({ title }) => (
         }}
       >
         {(upsertUser, { loading, error }) => (
-          <div>
+          <div
+            css={css`
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              height: 100%;
+            `}
+          >
             <div
               css={css`
-                max-width: 30ch;
+                width: 100%;
+                position: relative;
               `}
             >
-              <h1
+              <div
                 css={css`
-                  font-weight: 600;
-                  font-size: 18px;
+                  max-width: 30ch;
+                  position: relative;
+                  margin: auto;
                 `}
               >
-                {title}
-              </h1>
-              <NameForm
-                onValidSubmit={name => {
-                  upsertUser({ variables: { name } });
-                }}
-                defaultName={lastUsername}
+                <h1
+                  css={css`
+                    font-weight: 600;
+                    font-size: 18px;
+                  `}
+                >
+                  {title}
+                </h1>
+                <NameForm
+                  onValidSubmit={name => {
+                    upsertUser({ variables: { name } });
+                  }}
+                  defaultName={lastUsername}
+                >
+                  <LoginButton loading={loading} />
+                </NameForm>
+              </div>
+              <div
+                css={css`
+                  position: absolute;
+                  top: calc(100% + 10px);
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                `}
               >
-                <LoginButton loading={loading} />
-              </NameForm>
+                <LoginError error={error} />
+              </div>
             </div>
-            <LoginError error={error} />
           </div>
         )}
       </Mutation>
