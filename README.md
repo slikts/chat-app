@@ -1,6 +1,7 @@
 # Chat App example
 
-**[Running demonstration][demo]**
+- **[Running demonstration][demo]**
+- [Storybook](http://kaste.untu.ms/chat-app-storybook/)
 
 ## Screenshots
 
@@ -12,9 +13,10 @@
 ## Tools used
 
 ### Client
-- react-apollo
-- recompose
+- [react-apollo](https://github.com/apollographql/react-apollo)
+- [recompose](https://github.com/acdlite/recompose)
 - [office-ui-fabric-react](https://github.com/OfficeDev/office-ui-fabric-react)
+- [Storybook](https://github.com/storybooks/storybook)
 
 ### Server
 - [Prisma](https://www.prisma.io/)
