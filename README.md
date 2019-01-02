@@ -19,6 +19,7 @@
 - Ping-based timeouts
 - Server-side persistence
 - Auto-linkify messages
+- Name colors
 
 ## Screenshots
 
