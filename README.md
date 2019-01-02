@@ -35,6 +35,7 @@
 - [recompose](https://github.com/acdlite/recompose)
 - [office-ui-fabric-react](https://github.com/OfficeDev/office-ui-fabric-react)
 - [Storybook](https://github.com/storybooks/storybook)
+- [emotion](https://github.com/emotion-js/emotion)
 
 ### Server
 - [Prisma](https://www.prisma.io/)
