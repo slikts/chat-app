@@ -40,32 +40,29 @@ const Container = compose(
     },
   }),
   withTheme
-)(({ children, theme }) => {
-  console.log(theme);
-  return (
-    <CustomScroll
-      heightRelativeToParent="100%"
-      keepAtBottom
-      ref={this.scroller}
-      scrollTo={9999}
+)(({ children, theme }) => (
+  <CustomScroll
+    heightRelativeToParent="100%"
+    keepAtBottom
+    ref={this.scroller}
+    scrollTo={9999}
+  >
+    <div
+      role="list"
+      css={css`
+        background: ${theme.palette.white};
+        padding: 10px;
+        min-height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        border-right: 1px solid ${theme.semanticColors.inputBorder};
+      `}
     >
-      <div
-        role="list"
-        css={css`
-          background: ${theme.palette.white};
-          padding: 10px;
-          min-height: 100%;
-          display: flex;
-          justify-content: flex-end;
-          flex-direction: column;
-          border-right: 1px solid ${theme.semanticColors.inputBorder};
-        `}
-      >
-        {children}
-      </div>
-    </CustomScroll>
-  );
-});
+      {children}
+    </div>
+  </CustomScroll>
+));
 
 const EventList = ({ last }) => (
   <Query query={LAST_EVENTS} variables={{ last }} fetchPolicy="network-only">
