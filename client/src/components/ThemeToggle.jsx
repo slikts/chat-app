@@ -9,9 +9,6 @@ import { loadTheme } from "office-ui-fabric-react";
 import themes from "../themes";
 import { withTheme } from "./Theme";
 
-window.parent.qs = themes;
-window.parent.q = loadTheme;
-
 const ThemeToggle = compose(
   withApollo,
   withHandlers({
