@@ -58,6 +58,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
     "espree": "^5.0.0",
+    "gh-pages": "^2.0.1",
     "graphql-cli": "^3.0.3",
     "mini-css-extract-plugin": "^0.5.0",
     "neutrino": "^8.3.0",
@@ -70,7 +71,9 @@
     "build": "neutrino build --use @neutrinojs/react",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook -c .storybook -o .out",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages --dist build"
   },
   "keywords": [
     "chat",
