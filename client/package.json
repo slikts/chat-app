@@ -69,6 +69,7 @@
     "start": "neutrino start --use @neutrinojs/react",
     "build": "neutrino build --use @neutrinojs/react",
     "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook -c .storybook -o .out",
     "build-storybook": "build-storybook"
   },
   "keywords": [
