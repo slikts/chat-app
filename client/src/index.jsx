@@ -4,24 +4,11 @@ import { Global, css } from "@emotion/core";
 import { ApolloProvider } from "react-apollo";
 import App from "./components/App";
 import client from "./client";
+import Wrapper from "./components/Wrapper";
 
 render(
-  <React.Fragment>
-    <Global
-      styles={css`
-        * {
-          box-sizing: border-box;
-        }
-        :root,
-        body,
-        #root {
-          height: 100%;
-        }
-      `}
-    />
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
-  </React.Fragment>,
+  <Wrapper>
+    <App />
+  </Wrapper>,
   document.querySelector("#root")
 );
