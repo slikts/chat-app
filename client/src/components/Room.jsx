@@ -64,7 +64,7 @@ const Room = compose(
         grid-area: 2 / 1;
       `}
     >
-      <EventList last={100} />
+      <EventList last={0} />
     </main>
     <MessageInput
       css={css`
