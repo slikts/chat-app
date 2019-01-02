@@ -1,0 +1,26 @@
+enum EventType {
+  MESSAGE
+  PART
+  JOIN
+  CONNECT
+  DISCONNECT
+  TIMEOUT
+  NICK
+}
+
+type Event {
+  id: ID! @unique
+  createdAt: DateTime!
+  type: EventType!
+  from: String!
+  data: String!
+}
+
+type User {
+  id: ID! @unique
+  name: String! @unique
+  createdAt: DateTime!
+  away: Boolean
+  lastPing: DateTime
+  token: String! @unique
+}
