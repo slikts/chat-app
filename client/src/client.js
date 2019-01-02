@@ -6,7 +6,7 @@ import { HttpLink } from "apollo-link-http";
 import { WebSocketLink } from "apollo-link-ws";
 import { getMainDefinition } from "apollo-utilities";
 import { createNetworkStatusNotifier } from "react-apollo-network-status";
-import { persistCache } from "apollo-cache-persist";
+// import { persistCache } from "apollo-cache-persist";
 import { endpoint } from "../config.json";
 
 const notifier = createNetworkStatusNotifier();
@@ -60,7 +60,5 @@ const client = new ApolloClient({
   cache,
   connectToDevTools: true,
 });
-
-window.client = client;
 
 export default client;
