@@ -3,6 +3,23 @@
 - **[Running demonstration][demo]**
 - [Storybook](http://kaste.untu.ms/chat-app-storybook/)
 
+## Overview
+
+- Real-time updates based on GraphQL subscriptions over WebSocket
+- Data API implemented using a declarative [data model] with Prisma
+- Style-guide driven component development using Storybook
+
+
+### Features
+
+- Greedy input focus
+- Themeable
+- User away status
+- Name change
+- Ping-based timeouts
+- Server-side persistence
+- Auto-linkify messages
+
 ## Screenshots
 
 ![screenshot](https://i.imgur.com/rPbNsGK.png)
@@ -20,3 +37,5 @@
 
 ### Server
 - [Prisma](https://www.prisma.io/)
+
+[data model]: https://github.com/slikts/chat-app/blob/master/server/prisma/datamodel.graphql
