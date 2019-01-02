@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
+    "watch": "nodemon src/index.js",
     "prisma": "prisma",
     "generate": "prisma generate"
   },
